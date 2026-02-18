@@ -186,7 +186,6 @@
         .speed-btn.quality { background: rgba(248, 113, 113, 0.15); color: #f87171; border-color: rgba(248, 113, 113, 0.3); }
         .speed-btn.inactive { background: rgba(100, 116, 139, 0.15); color: #64748b; border-color: rgba(100, 116, 139, 0.3); }
 
-        /* History Panel */
         .history-panel {
             position: fixed; inset: 0; z-index: 4000;
             background: rgba(0, 0, 0, 0.8);
@@ -209,7 +208,6 @@
         }
         .history-item:hover { background: rgba(129, 140, 248, 0.1); border-color: rgba(129, 140, 248, 0.2); }
 
-        /* Key Status Indicator */
         .key-status-grid {
             display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.25rem;
         }
@@ -221,7 +219,6 @@
         .key-dot.exhausted { background: #f87171; opacity: 0.5; }
         .key-dot.standby { background: #818cf8; opacity: 0.3; }
 
-        /* Gemini Mode Display */
         .gemini-mode-display {
             background: linear-gradient(135deg, rgba(129, 140, 248, 0.1), rgba(167, 139, 250, 0.1));
             border: 1px solid rgba(129, 140, 248, 0.2);
@@ -244,7 +241,6 @@
 
     <div class="ambient-bg"></div>
 
-    <!-- Loading Overlay -->
     <div id="loader" class="fixed inset-0 z-[3000] bg-slate-950 flex items-center justify-center transition-opacity duration-700">
         <div class="text-center">
             <div class="relative w-16 h-16 mx-auto mb-3">
@@ -255,7 +251,6 @@
         </div>
     </div>
 
-    <!-- Auth Screen -->
     <div id="authScreen" class="fixed inset-0 z-[2000] flex items-center justify-center p-4 hidden" style="background: linear-gradient(135deg, #0c1222 0%, #162032 50%, #0c1222 100%);">
         <div class="w-full max-w-sm glass-bright p-6 rounded-2xl text-center">
             <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
@@ -280,9 +275,7 @@
         </div>
     </div>
 
-    <!-- Main UI -->
     <div id="mainUI" class="flex flex-col h-full hidden relative z-10">
-        <!-- Header -->
         <header class="h-[60px] glass-bright flex items-center justify-between px-4 z-50">
             <div class="flex items-center gap-2">
                 <button id="backToLobby" onclick="exitPortal()" class="hidden w-8 h-8 rounded-lg bg-indigo-500/20 items-center justify-center">
@@ -309,12 +302,11 @@
         </header>
 
         <main class="flex-1 overflow-hidden relative">
-            <!-- Lobby -->
             <div id="lobbyView" class="absolute inset-0 overflow-y-auto p-4 no-scrollbar">
                 <div class="max-w-5xl mx-auto py-4">
                     <div class="mb-5 text-center md:text-left">
                         <h2 class="text-lg md:text-2xl font-black tracking-tight uppercase">
-                            Selamat Datang, <span id="userNameDisp" class="text-indigo-400">COMMANDER</span>
+                            Selamat Datang, <span id="userNameDisp" class="text-indigo-400">PLAYER NPC</span>
                         </h2>
                         <div class="mt-2 flex items-center justify-center md:justify-start gap-2 flex-wrap">
                             <span id="apiStatusBadge" class="status-badge connected">
@@ -335,7 +327,6 @@
                 </div>
            </div>
 
-            <!-- Workspace -->
             <div id="workspaceView" class="hidden absolute inset-0 main-layout">
                 <div class="chat-panel flex flex-col h-full bg-slate-900/20">
                     <div class="px-3 py-2 border-b border-indigo-500/10 bg-slate-900/40 flex items-center justify-between">
@@ -422,7 +413,6 @@
         </main>
     </div>
 
-    <!-- History Panel -->
     <div id="historyPanel" class="history-panel">
         <div class="history-panel-content flex flex-col">
             <div class="p-4 border-b border-indigo-500/20 flex items-center justify-between">
@@ -440,7 +430,6 @@
         </div>
     </div>
 
-    <!-- Sidebar -->
     <aside id="sidebar" class="fixed inset-y-0 right-0 w-72 max-w-[85vw] translate-x-full glass-bright z-[2500] transition-transform duration-500 flex flex-col">
         <div class="flex justify-between items-center p-4 border-b border-indigo-500/10">
             <h3 class="font-black text-sm uppercase">Vault <span class="text-indigo-400">Control</span></h3>
@@ -448,7 +437,6 @@
         </div>
 
         <div class="flex-1 overflow-y-auto no-scrollbar p-4 space-y-4">
-            <!-- Gemini Mode Display -->
             <div class="gemini-mode-display">
                 <div class="flex items-center gap-2 mb-3">
                     <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
@@ -477,15 +465,12 @@
                 </div>
             </div>
 
-            <!-- Key Pool Status -->
             <div class="glass-card p-3 rounded-xl space-y-2">
                 <div class="flex items-center justify-between">
                     <label class="text-xs font-bold text-slate-200"><i class="fa-solid fa-key text-indigo-400 mr-1"></i>API Key Pool</label>
                     <span id="keyPoolStatus" class="text-[9px] text-green-400">20 Active</span>
                 </div>
-                
                 <div class="key-status-grid" id="keyStatusGrid">
-                    <!-- Generated by JS -->
                 </div>
                 
                 <div class="flex items-center justify-between text-[9px]">
@@ -496,12 +481,11 @@
                 <div class="p-2 bg-green-500/10 border border-green-500/20 rounded-lg">
                     <p class="text-[9px] text-green-300 flex items-center gap-1">
                         <i class="fa-solid fa-rotate"></i>
-                        apikey di restart setiao 60 detik
+                        apikey di restart selama 60 detik
                     </p>
                 </div>
             </div>
 
-            <!-- Rate Info -->
             <div class="glass-card p-3 rounded-xl space-y-1">
                 <label class="text-xs font-bold text-slate-200"><i class="fa-solid fa-chart-bar text-indigo-400 mr-1"></i>Rate Limit</label>
                 <div class="text-[9px] text-slate-400 space-y-0.5">
@@ -510,7 +494,6 @@
                 </div>
             </div>
 
-            <!-- Quick Actions -->
             <div class="space-y-2">
                 <button onclick="openHistoryPanel()" class="w-full py-2.5 bg-indigo-500/10 border border-indigo-500/20 rounded-lg text-xs font-bold text-indigo-400 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-clock-rotate-left"></i> Buka History
@@ -528,7 +511,6 @@
         </div>
     </aside>
 
-    <!-- Drive Modal -->
     <div id="driveModal" class="fixed inset-0 z-[3000] bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
         <div class="glass-bright p-4 rounded-xl w-full max-w-xs">
             <h4 class="font-bold text-sm mb-2"><i class="fa-brands fa-google-drive text-yellow-400 mr-2"></i>Link Drive</h4>
@@ -574,7 +556,7 @@
             "AIzaSyAsKUTqGlMvqtN-E3e5-4P5oz7sij1QL_E",   // Ganti dengan key asli
             "AIzaSyDCxkjv1wRdCJHQSJJX-mMdDW1-LZp4jyo",   // Ganti dengan key asli
             "AIzaSyB13AmGhznITsd_W7Rz54LfQ7qWJfV7IEc",   // Ganti dengan key asli
-            "AIzaSyC52CUuke2D6K91snVx8iEH_z8pT_Ixnec",   // false ( 5 )
+            "AIzaSyDCxkjv1wRdCJHQSJJX-mMdDW1-LZp4jyo",   // false ( 5 )
             "AIzaSyB13AmGhznITsd_W7Rz54LfQ7qWJfV7IEc",   // Ganti dengan key asli
             "AIzaSyC52CUuke2D6K91snVx8iEH_z8pT_Ixnec",   // false ( 7 )
             "AIzaSyBjobCOS-zciLKG-OMdgdu9sNpa8OFSx7I",   // Ganti dengan key asli
@@ -610,8 +592,7 @@
                 attempts++;
             }
             
-            // All keys exhausted - start auto reset timer
-            showToast('Semua key limit. Auto-reset dalam 60 detik...', 'warning');
+            showToast('Semua key limit nih. Auto-reset dalam 60 detik...', 'warning');
             startResetTimer();
             return null;
         }
@@ -664,7 +645,6 @@
             }).join('');
         }
 
-        // Toast
         function showToast(message, type = 'success') {
             const existing = document.querySelector('.toast');
             if (existing) existing.remove();
@@ -675,8 +655,7 @@
             setTimeout(() => toast.remove(), 3000);
         }
         window.showToast = showToast;
-
-        // Speed Mode
+        
         window.setSpeedMode = (mode) => {
             currentSpeedMode = mode;
             document.querySelectorAll('.speed-btn').forEach(btn => {
@@ -692,14 +671,12 @@
             display.className = `text-[10px] font-bold ${colors[currentSpeedMode]}`;
             display.textContent = currentSpeedMode.charAt(0).toUpperCase() + currentSpeedMode.slice(1);
             
-            // Update header indicator
             const indicator = document.getElementById('currentModeIndicator');
             const model = document.getElementById('modelSelect').value;
             const modelName = model.includes('pro') ? 'Pro' : model.includes('8b') ? '8B' : model.includes('2.0') ? '2.0' : 'Flash';
             indicator.innerHTML = `<span class="mode-dot bg-${currentSpeedMode === 'fast' ? 'green' : currentSpeedMode === 'balanced' ? 'yellow' : 'red'}-400"></span><span class="text-slate-300">${modelName}</span>`;
         };
 
-        // History Panel
         window.openHistoryPanel = () => {
             document.getElementById('historyPanel').classList.add('show');
             loadFullHistory();
@@ -757,7 +734,6 @@
             }
         }
 
-        // Attachments
         window.toggleAttachmentMenu = () => document.getElementById('attachmentMenu').classList.toggle('show');
         
         window.addAttachment = (type) => {
@@ -826,7 +802,6 @@
             showToast('Link Drive ditambahkan!', 'success');
         };
 
-        // Auth
         onAuthStateChanged(auth, async (user) => {
             const loader = document.getElementById('loader');
             const authScreen = document.getElementById('authScreen');
@@ -868,13 +843,11 @@
             document.getElementById('authBtnText').innerText = isLoginMode ? "Enter" : "Daftar";
         };
 
-        // Clear Chat
         window.clearCurrentChat = () => {
             document.getElementById('chatBox').innerHTML = `<div class="flex justify-start msg-enter"><div class="max-w-[85%] bg-slate-800/80 border border-indigo-500/10 p-3 rounded-xl rounded-bl-sm text-xs"><p class="font-bold text-indigo-400 mb-1 text-[9px]">NEXUS AI</p><p class="text-slate-200">Chat cleared. Siap membantu!</p></div></div>`;
             showToast('Chat cleared!', 'success');
         };
 
-        // Send Message
         window.sendMessage = async () => {
             const input = document.getElementById('mainInput');
             const prompt = input.value.trim();
@@ -908,7 +881,6 @@
             removeAttachment();
             chat.scrollTop = chat.scrollHeight;
             
-            // Save history
             let responseText = '';
             if (currentUser) {
                 try {
@@ -950,7 +922,6 @@
             responseText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response";
                 chat.innerHTML += `<div class="flex justify-start msg-enter"><div class="max-w-[85%] bg-slate-800/80 border border-indigo-500/10 p-2.5 rounded-xl text-xs"><p class="font-bold text-indigo-400 text-[9px] mb-1">NEXUS AI</p><div class="text-slate-200">${responseText.replace(/\n/g, '<br>')}</div></div></div>`;
                 
-                // Update history with response
                 if (currentUser && window.currentHistoryId) {
                     try {
                         await updateDoc(doc(db, 'artifacts', 'virza-v12', 'users', currentUser.uid, 'history', window.currentHistoryId), { response: responseText });
@@ -986,7 +957,6 @@
         };
         window.toggleCanvasManually = () => toggleCanvas(document.getElementById('previewPanel').classList.contains('hidden'));
 
-        // Initialize
         updateKeyUI();
         updateModeDisplay();
     </script>
