@@ -636,7 +636,7 @@
             toast.className = `toast ${type}`;
             toast.textContent = message;
             document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 3000);
+            setTimeout(() => toast.remove(), 1000);
         }
 
         window.showToast = showToast;
