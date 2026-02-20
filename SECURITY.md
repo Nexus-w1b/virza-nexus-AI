@@ -1,21 +1,17 @@
 # Security Policy
 
 ## Supported Versions
-
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Kami sangat menyarankan untuk selalu menggunakan versi terbaru dari repositori ini.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 1.0.x   | :white_check_mark: |
+| < 1.0   | :x:                |
 
 ## Reporting a Vulnerability
+Jika Anda menemukan celah keamanan, tolong jangan laporkan lewat "Public Issue". 
+Silakan hubungi kami melalui:
+- Email: **email-kamu@gmail.com**
+- Atau melalui fitur [Private Vulnerability Reporting](https://github.com/Nexus-w1b/virza-cloud-nexus/security/advisories/new) di GitHub.
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Kami akan merespons dalam waktu 48 jam.
